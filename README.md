@@ -48,7 +48,7 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ## Credits
 
-- Rose and paper images: [Your sources or Unsplash/Pixabay]
-- Music: [Your source or royalty-free music credit]
+- Rose and paper images: *Google Chrome*
+- Music: *YouTube India*
 
 ---
