@@ -17,16 +17,20 @@ const letterContent = document.getElementById("letterContent");
 
 let heartTimer = null;
 let musicPlayed = false;
-let loverName = "Your Name";
-let yourName = "Giver Name";
+let loverName = "Bhawii";
+let yourName = "Rahul Chodhary";
 let playCount = 0;
 
-/* Always ask for names (do not store in localStorage) */
-window.addEventListener("DOMContentLoaded", () => {
-  loverName = prompt("Your Name:", "Your Name") || "Your Name";
-  yourName = prompt("Sender Name:", "Giver Name") || "Giver Name";
+function updateLetterNames() {
   salutation.textContent = `Dear ${loverName},`;
-  letterContent.querySelector(".signature").textContent = `— With love, ${yourName}`;
+  const signatureEl = letterContent.querySelector(".signature");
+  if (signatureEl) {
+    signatureEl.textContent = `— With love, ${yourName}`;
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  updateLetterNames();
 });
 
 /* Music controls */
