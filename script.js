@@ -31,6 +31,15 @@ function updateLetterNames() {
 
 window.addEventListener("DOMContentLoaded", () => {
   updateLetterNames();
+  bgMusic.volume = 0.25;
+  bgMusic.currentTime = 0;
+  bgMusic.play().catch(() => {
+    // Autoplay may be blocked until the user interacts; do not fail the page.
+  });
+  if (playCount < 1) {
+    playCount = 1;
+  }
+  musicBtn.textContent = "🔇";
 });
 
 /* Music controls */
@@ -42,7 +51,6 @@ musicBtn.addEventListener("click", () => {
     musicBtn.textContent = "🔇";
   }
 });
-bgMusic.volume = 0.25;
 
 /* Show music button after open */
 openBtn.addEventListener("click", () => {
